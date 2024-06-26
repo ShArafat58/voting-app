@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    color:'#000';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.login-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255,255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+
+h2{
+    font-size: 2em;
+    color: #f3e8e8;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #f6efef;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #f9f2f2;
+    padding: 0 35px 0 5px;
+
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: #f6ecec;
+    font-size: 1.2em;
+    line-height: 57px;
+
+}
+
+.remeber-forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: aqua;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remeber-forget label input{
+    margin-right: 3px;
+}
+
+.remeber-forget a {
+    color: #f1e7e7;
+    text-decoration: none;
+}
+
+.remeber-forget a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    background: #036920;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.register-link{
+    font-size: .9em;
+    color: #f3e9e9;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register-link p a {
+    color: #f5f1f1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 360px){
+    .login-box{
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+    .input-box{
+        width: 290px;
+    }
+}
+
+
+
+/********* Register *************/
+
+
+.register-box {
+    position: relative;
+    width: 900px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.register-box h2 {
+    font-size: 1.5em; /* Reduce font size */
+    color: #f3e8e8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-row .input-box {
+    width: 30%;
+}
+
+.register-box .input-box {
+    position: relative;
+    margin: 10px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.register-box .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 0.9em; /* Reduce font size */
+    color: #f6efef;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.register-box .input-box p {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-150%);
+    font-size: 0.9em; /* Reduce font size */
+    color: #f6efef;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.register-box .input-box input:focus~label,
+.register-box .input-box input:valid~label,
+.register-box .input-box select:focus~label,
+.register-box .input-box select:valid~label {
+    top: -5px;
+}
+
+.register-box .input-box input,
+.register-box .input-box select {
+    width: 100%;
+    height: 40px; /* Reduce height */
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.9em; /* Reduce font size */
+    color: #f9f2f2;
+    padding: 0 35px 0 5px;
+}
+
+.register-box .input-box select option {
+    background: black;
+
+}
+
+.register-box .input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #f6ecec;
+    font-size: 1em; /* Reduce icon size */
+    line-height: 45px; /* Adjust line height */
+}
+
+.register-box button {
+    width: 100%;
+    height: 40px;
+    background: #036920;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.register-box .login-link {
+    font-size: .9em;
+    color: #f3e9e9;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register-box .login-link p a {
+    color: #f5f1f1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-box .login-link p a:hover {
+    text-decoration: underline;
+}
+
+
+
+.error-message {
+    color: red; /* Change the text color to red */
+    font-size: 1rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    margin-top: 10px; /* Add some space above the message */
+    text-align: center; /* Center the message */
+    display: block; /* Ensure it takes up full width */
+}
+
