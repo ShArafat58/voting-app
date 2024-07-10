@@ -100,7 +100,7 @@ $conn->close();
     <script>
         <?php if (isset($redirect) && $redirect): ?>
         // Redirect to homepage using JavaScript
-        window.location.href = 'votemat_index.php';
+        window.location.href = 'vote_MAT/index.php';
         <?php endif; ?>
     </script>
 </body>
