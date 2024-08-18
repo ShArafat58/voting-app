@@ -6,7 +6,7 @@
     <div class="menu-item"><a href="voters.php"><i class="fa-solid fa-users"></i> Voters</a></div>
     <div class="menu-item"><a href="candidates.php"><i class="fa-solid fa-user-group"></i> Candidates</a></div>
     <div class="menu-item"><a href="position.php"><i class="fa-solid fa-image-portrait"></i> Positions</a></div>
-    <div class="menu-item"><a href="voter_request.php"><i class="fa-solid fa-file-invoice"></i> Voter Requests</a></div>
+    <div class="menu-item"><a href="All_Votes.php"><i class="fa-solid fa-file-invoice"></i> Votes</a></div>
     
 
     <h3 class="menu-header"><i class="fa-solid fa-gear"></i> Voting</h3>

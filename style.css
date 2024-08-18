@@ -9,7 +9,7 @@
     
 }
 
-#section-container{
+#register-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,11 +298,11 @@ button{
 
 
 .error-message {
-    color: red; /* Change the text color to red */
-    font-size: 1rem; /* Adjust the font size as needed */
-    font-weight: bold; /* Make the text bold */
-    margin-top: 10px; /* Add some space above the message */
-    text-align: center; /* Center the message */
-    display: block; /* Ensure it takes up full width */
+    color: red;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center; 
+    display: block;
+    margin-top:-10px;
 }
 

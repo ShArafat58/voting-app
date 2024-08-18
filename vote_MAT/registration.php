@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <div class="container">
+   <div id="container">
         <div class="heading"><h1>Online Voting System</h1></div>
         <form action="register_data.php" method="POST" enctype="multipart/form-data">
             <div class="form">

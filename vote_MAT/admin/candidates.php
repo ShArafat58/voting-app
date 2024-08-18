@@ -31,8 +31,8 @@ if ($_SESSION['adminLogin'] != 1) {
     }
 </style>
 <body>
-    <div class="container">
-        <div class="header">
+    <div id="container">
+        <div id="header">
             <span class="menu-bar" id="show" onclick="showMenu()">&#9776;</span>
             <span class="menu-bar" id="hide" onclick="hideMenu()">&#9776;</span>
             <span class="logo">Voting System</span>

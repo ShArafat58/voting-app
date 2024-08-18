@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-   <div class="container">
+   <div id="container">
         <div class="heading"><h1>Online Voting System</h1></div>
         <div class="form">
             <h4>Voting Schedule</h4>

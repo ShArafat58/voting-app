@@ -17,16 +17,16 @@ $_SESSION['userLogin'] = 0;
 </head>
 
 <body>
-    <div class="container">
+    <div id="container">
         <div class="heading">
             <h1>Online Voting System</h1>
         </div>
         <div class="form">
-            <h4>Voter Login</h4>
+            <h4>Voting Panel</h4>
             <form action="voter_login_data.php" method="POST">
                 <label class="label">Phone Number:</label>
                 <input type="text" name="phone" id="" class="input" placeholder="Enter Phone Number" required>
-                <button class="button" type="submit" name="login">Login</button>
+                <button class="button" type="submit" name="login">Go to Vote</button>
                 <div class="link1">New user ? <a href="registration.php">Register here</a></div>
                 <!-- <div class="link1">Change Mobile Number ? <a href="lost_phone.php">Send Request</a></div> -->
             </form>

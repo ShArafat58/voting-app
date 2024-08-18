@@ -46,7 +46,7 @@ if ($_SESSION['phone'] == null) {
 </head>
 
 <body>
-    <div class="container">
+    <div id="container">
         <div class="header">
             <span class="logo">Voting System</span>
             <span class="profile" onclick="showProfile()"><img src="<?php echo $_SESSION['idcard']; ?>" alt=""><label><?php echo $_SESSION['fname'] . " " . $_SESSION['lname']; ?></label></span>

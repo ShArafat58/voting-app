@@ -44,7 +44,7 @@ elseif($_SESSION['status']=="voted")
 </style>
 </head>
 <body>
-<div class="container">
+<div id="container">
 <div class="heading"><h1>Online Voting System</h1></div>
 <div class="header">
         <span class="logo">Voting System</span>

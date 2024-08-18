@@ -9,7 +9,7 @@
         header("location:index.php");
     }
 
-    $voter_voted_query="SELECT * FROM register WHERE status='voted'";
+    $voter_voted_query="SELECT * FROM register WHERE status='voted';";
     $voter_voted_data=mysqli_query($con,$voter_voted_query);
     
     $voter_voted=mysqli_num_rows($voter_voted_data);
@@ -28,8 +28,8 @@
     <script src="../js/chart.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div id="container">
+        <div id="header">
             <span class="menu-bar" id="show" onclick="showMenu()">&#9776;</span>
             <span class="menu-bar" id="hide" onclick="hideMenu()">&#9776;</span>
             <span class="logo">Voting System</span>
@@ -64,7 +64,7 @@
             <div class="info-box" id="box4">
                 <h1><?php echo $voter_voted; ?></h1>
                 <h3>Voters Voted</h3>
-                <a href="#">More Info <i class="fa-solid fa-circle-arrow-right"></i></a>
+                <a href="All_Votes.php">More Info <i class="fa-solid fa-circle-arrow-right"></i></a>
             </div>
             <div class="result-box">
                 <h2 class="result-title">Voting Tally</h2>

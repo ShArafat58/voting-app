@@ -3,7 +3,7 @@
     font-family: 'Bahnschrift Light';
 }
 
-.container {
+#container {
     height: 100vh;
     width: 100vw;
     overflow: auto;
@@ -18,7 +18,7 @@
 }
 
 /* header start */
-.header {
+#header {
     height: 3rem;
     overflow: auto;
     background: #222d32;
@@ -28,8 +28,8 @@
     width: 100%;
 }
 
-.header .menu-bar,
-.header .logo {
+#header .menu-bar,
+#header .logo {
     font-size: 1.4rem;
     font-weight: 900;
     margin-left: 0.5rem;
@@ -38,20 +38,20 @@
     cursor: pointer;
 }
 
-.header .logo {
+#header .logo {
     margin-top: 0.75rem;
 }
 
-.header #hide {
+#header #hide {
     display: none;
 }
 
-.header .profile {
+#header .profile {
     float: right;
     margin-right: 1rem;
 }
 
-.header .profile img {
+#header .profile img {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 
-.header .profile label {
+#header .profile label {
     float: right;
     margin-top: 1rem;
     font-weight: 900;

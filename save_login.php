@@ -64,7 +64,7 @@ $conn->close();
 </head>
 
 <body>
-    <section>
+    <section class="login-container">
         <div class="login-box">
             <form action="save_login.php" method="post">
                 <h2>You Have to Login First</h2>
@@ -80,7 +80,7 @@ $conn->close();
                     <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
-                <div id="error-message" class="error-message">
+                <div id="error-message" style="margin-bottom: 10px;" class="error-message">
                     <!-- Error message will be shown here -->
                     <?php if (isset($error_message)) echo $error_message; ?>
                 </div>
