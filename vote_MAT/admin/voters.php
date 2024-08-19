@@ -98,9 +98,8 @@ if($_SESSION['adminLogin']!=1)
                         <td>".$result['phone']."</td>
                         <td>".$result['address']."</td>
                         <td>".$result['status']."</td>
-                        <td><a href='verify_voter.php?vid=$result[id]' style='display:$verify' class='del verify' onClick='return validconfirm()'><i class='fa-solid fa-check'></i> Veirfy</a>
-                        <a href='user-update.php?fn=$result[fname]&ln=$result[lname]&idno=$result[idnum]&ph=$result[phone]&ad=$result[address]' class='edit'><i class='fa-solid fa-pen-to-square'></i> Edit</a>
-                        <a href='user-delete.php?ph=$result[phone]&file_path=$result[idcard]' class='del' onClick='return delconfirm()'><i class='fa-solid fa-trash-can'></i> Delete</a></td>
+                        <td>verified
+                        </td>
                         </tr>";
                       }
                       
@@ -153,8 +152,7 @@ if($_SESSION['adminLogin']!=1)
                         <td>".$result['address']."</td>
                         <td>".$result['status']."</td>
                         <td><a href='verify_voter.php?vid=$result[id]' class='del verify' onClick='return validconfirm()' style='display: $verify;'><i class='fa-solid fa-check'></i> Veirfy</a>
-                        <a href='user-update.php?fn=$result[fname]&ln=$result[lname]&idno=$result[idnum]&ph=$result[phone]&ad=$result[address]' class='edit'><i class='fa-solid fa-pen-to-square'></i> Edit</a>
-                        <a href='user-delete.php?ph=$result[phone]&file_path=$result[idcard]' class='del' onClick='return delconfirm()'><i class='fa-solid fa-trash-can'></i> Delete</a></td>
+                        </td>
                         </tr>";
                       }
                       

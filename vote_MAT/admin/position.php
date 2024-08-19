@@ -41,12 +41,12 @@ if($_SESSION['adminLogin']!=1)
         </div>
         <?php include '../includes/menu.php'; ?>
         <div id="main">
-            <div class="heading"><a href="add_position.php" class="add-btn" onclick="showForm()">+ Add</a><h2>Positions</h2></div>
+            <div class="heading"><h2 style="color: green;">Positions</h2></div>
             
            <table class="table">
                <thead>
                    <th>position</th>
-                   <th>Action</th>
+                   
                </thead>
                <tbody>
                <?php
@@ -57,8 +57,7 @@ if($_SESSION['adminLogin']!=1)
                       {
                         echo "<tr>
                         <td>".$result['position_name']."</td>
-                        <td><a href='pos_update.php?psnm=$result[position_name]&id=$result[id]'' class='edit'><i class='fa-solid fa-pen-to-square'></i> Edit</a>
-                        <a href='pos-delete.php?id=$result[id]' class='del' onClick='return delconfirm()'><i class='fa-solid fa-trash-can'></i> Delete</a></td>
+                        
                         </tr>";
                       }
                       

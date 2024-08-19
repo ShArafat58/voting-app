@@ -7,17 +7,18 @@ if ($_SESSION['adminLogin'] != 1) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Voting System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/all.min.css">
 </head>
 <style>
-    .form
-    {
+    .form {
         position: absolute;
         background: #fff;
         border-radius: 0rem;
@@ -25,11 +26,12 @@ if ($_SESSION['adminLogin'] != 1) {
         margin: 1rem;
         height: 0rem;
     }
-    .add-btn
-    {
+
+    .add-btn {
         text-decoration: none;
     }
 </style>
+
 <body>
     <div id="container">
         <div id="header">
@@ -49,45 +51,93 @@ if ($_SESSION['adminLogin'] != 1) {
         </div>
         <?php include '../includes/menu.php'; ?>
         <div id="main">
-            <div class="heading"><a href="cand-register.php" class="add-btn" onclick="showForm()">+ Add</a><h2>Candidates Information</h2></div>
-            
-           <table class="table">
-               <thead>
-                   <th>Candidate Name</th>
-                   <th>Candidate Symbol</th>
-                   <th>Symbol Image</th>
-                   <th>Position</th>
-                   <th>Total Votes</th>
-                   <th>Action</th>
-               </thead>
-               <tbody>
-               <?php
-                      
-                      include "../includes/all-select-data.php";
-                    
-                      while($result=mysqli_fetch_assoc($can_data))
-                      {
+            <div class="heading"><button type="button" class="add-btn" data-toggle="modal" data-target="#exampleModal">
+                    + Add
+                </button>
+                <h2>Candidates Information</h2>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <th>Candidate Name</th>
+                    <th>Candidate Symbol</th>
+                    <th>Symbol Image</th>
+                    <th>Position</th>
+                    <th>Total Votes</th>
+
+                </thead>
+                <tbody>
+                    <?php
+
+                    include "../includes/all-select-data.php";
+
+                    while ($result = mysqli_fetch_assoc($can_data)) {
                         echo "<tr>
-                        <td>".$result['cname']."</td>
-                        <td>".$result['symbol']."</td>
-                        <td><a href='$result[symphoto]'><img src='".$result['symphoto']."'></a></td>
-                        <td>".$result['position']."</td>
-                        <td>".$result['tvotes']."</td>
-                        <td><a href='cand-update.php?cn=$result[cname]&sy=$result[symbol]&ps=$result[position]' class='edit'><i class='fa-solid fa-pen-to-square'></i> Edit</a>
-                        <a href='can-delete.php?id=$result[id]' class='del' onClick='return delconfirm()'><i class='fa-solid fa-trash-can'></i> Delete</a></td>
+                        <td>" . $result['cname'] . "</td>
+                        <td>" . $result['symbol'] . "</td>
+                        <td><a href='$result[symphoto]'><img src='" . $result['symphoto'] . "'></a></td>
+                        <td>" . $result['position'] . "</td>
+                        <td>" . $result['tvotes'] . "</td>
+                        
                         </tr>";
-                      }
-                      ?>
-               </tbody>
-           </table>
+                    }
+                    ?>
+                </tbody>
+            </table>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Candidate</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form action="Add_candidate.php">
+                        <div class="modal-body">
+                            
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Candidate Name</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="cname" >
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Candidate Position</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" name="position" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="symbol">Candidate Symbol</label>
+                                    <input type="text" class="form-control" id="symbol" aria-describedby="emailHelp" name="symbol" >
+                                    
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="image">Symbol Image</label>
+                                    <input type="text" class="form-control" id="image" name="symphoto" >
+                                </div>
+                                
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
     <script src="../js/script.js"></script>
     <script>
-        function delconfirm()
-        {
+        function delconfirm() {
             return confirm('Delete this Candidate?');
         }
     </script>
 </body>
+
 </html>

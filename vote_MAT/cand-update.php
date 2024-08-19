@@ -19,6 +19,13 @@ if (isset($_GET['cn']) && isset($_GET['ps']) && isset($_GET['fname'])) {
     if (mysqli_query($conn, $sql)) {
         // Set success message
         $_SESSION['success'] = "Your vote has been successfully recorded!";
+
+        $update_vote_sql="UPDATE candidate
+        SET tvotes = tvotes + 1
+        WHERE cname = '$cname' AND position = '$position';
+        ";
+        mysqli_query($conn, $update_vote_sql);
+
         // Redirect to voted.php
         header("Location: voted.php");
         exit();

@@ -52,40 +52,32 @@ if($_SESSION['adminLogin']!=1)
             <div class="link"><a href="../includes/admin-logout.php" class="del"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></div>
         </div>
         <div id="main">
-        <div class="heading"><h2>Voter Requests</h2></div>
+        <div class="heading"><h2 style="color:black ">All Votes</h2></div>
            <table class="table">
                <thead>
-                    <th>Name</th>
-                    <th>ID Name</th>
-                    <th>ID Card</th>
-                    <th>DOB</th>
-                    <th>Old Phone No</th>
-                    <th>New Phone No</th>
-                    <th>Action</th>               
+                    <th>Candidate Name</th>
+                    <th>Candidate Position</th>
+                    <th>Voter Name</th>
+                                  
                </thead>
                <tbody>
                       <?php
                       
                       $con=mysqli_connect('localhost','root','','userdb');
                   
-                      $query="SELECT * FROM phno_change";
+                      $query="SELECT * FROM `votes`";
                   
                       $data=mysqli_query($con,$query);
                     
                       while($result=mysqli_fetch_assoc($data))
                       {
                         echo "<tr>
-                        <td>".$result['vname']."</td>
-                        <td>".$result['idname']."</td>
-                        <td><a href='../$result[idcard]'><img src='../".$result['idcard']."'></a></td>
-                        <td>".$result['dob']."</td>
-                        <td>".$result['old_phno']."</td>
-                        <td>".$result['new_phno']."</td>
-                         <td>
-                                <a href='#' class='del verify' onclick='return validconfirm()' style='display: block;'><i class='fa-solid fa-check'></i> Verify</a>
-                                <a href='user-update.php?fn={$voter['fname']}&ln={$voter['lname']}&idno={$voter['idnum']}&ph={$voter['phone']}&ad={$voter['address']}' class='edit'><i class='fa-solid fa-pen-to-square'></i> Edit</a>
-                                <a href='#' class='del' onclick='return delconfirm()'><i class='fa-solid fa-trash-can'></i> Delete</a>
-                            </td></tr>";
+                        <td>".$result['Candidate_Name']."</td>
+                        <td>".$result['Candidate_Pos']."</td>
+                        
+                        <td>".$result['Voter_Name']."</td>
+                        
+                        </tr>";
                       }
                       
                       ?>

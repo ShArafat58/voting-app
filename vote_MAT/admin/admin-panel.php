@@ -9,7 +9,7 @@
         header("location:index.php");
     }
 
-    $voter_voted_query="SELECT * FROM register WHERE status='voted';";
+    $voter_voted_query="SELECT * FROM `votes`;";
     $voter_voted_data=mysqli_query($con,$voter_voted_query);
     
     $voter_voted=mysqli_num_rows($voter_voted_data);
